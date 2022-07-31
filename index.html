@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Modelado Estático</title>
+    <meta name="description" content="Roughly 155 characters">
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body style="display: grid">
+    <!-- Content -->
+
+    <div class="portada">
+
+        <img class="imagenportada" src="DataBase/merlin_209939166_2fd3f06b-8d8a-4e13-aca9-afd604b1f70a-jumbo.jpg" alt="Portada" />
+
+
+        <div class="programo">
+            <img id="logo1" src="DataBase/intilogo.png" alt="LogoInti" />
+
+            <img id="logo2" src="DataBase/yoprogramo.png" alt="LogoInti" />
+        </div>
+
+        <div class="redes_sociales" style="display: inline">
+
+            <div style="display: inline-block">
+                <a href="https://www.facebook.com/" style="display: inline-block">
+                    <img class="red_social" src="DataBase/facebook_logo.png" alt="Facebook" />
+                </a>
+            </div>
+            <div style="display: inline-block">
+                <a href="https://www.instagram.com/" style="display: inline-block">
+                    <img class="red_social" src="DataBase/Instagram.png" alt="Instagram" />
+                </a>
+            </div>
+            <div style="display: inline-block">
+                <a href="https://www.linkedin.com/" style="display: inline-block">
+                    <img class="red_social" src="DataBase/Linkedin.png" alt="Linkedin" />
+                </a>
+            </div>
+
+        </div>
+
+        <div class="logi" id="conectarse" style="display: block">
+            <button type="button" class="btn btn-success" onclick="habilitar_edicion()">Login</button>
+        </div>
+
+        <div class="logi" id="desconectarse">
+            <button type="button" class="btn btn-dark" onclick="deshabilitar_edicion()">Logout</button>
+        </div>
+
+
+    </div>
+
+    <div class="presentacion">
+
+        <div class="perfil">
+            <img id="imagenperfil" src="DataBase/gregg-night-in-the-woods.gif" alt="imagen_error()" />
+
+            <div class="edicion" id="contenedor_editar_foto">
+                <button type="button" id="boton_imagen_perfil" class="btn btn-light" onclick="cambiar_perfil()"></button>
+            </div>
+
+            <div class="input_editar" id="input_edit_foto_perfil" style="display: none">
+                <div class="cancelar_y_opcion" style="display: block">
+
+                    <div class="contenedor_opcion">
+                        <input id="nueva_imagen_perfil" type="file" onchange="reemplazar_imagen_perfil(this.value)" />
+                    </div>
+
+                    <div class="contenedor_cancelar">
+                        <button type="button" class="btn btn-danger" onclick="cerrar_ventana()">Cancelar</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contenedorNombreYFoto" id="contenedorUbaPosicion">
+                <div id="contenedornombreUBA">
+                    <span id="textoNombreUBA">Universidad de Buenos Aires</span>
+                </div>
+
+                <div id="contenedorfotoUBA">
+
+                    <img id="fotoUBA" src="DataBase/Linkedin.png" alt="Foto UBA" />
+                </div>
+            </div>
+
+
+            <div class="contenedor_linea">
+                <div id="contenedor_nombre_perfil">
+                    <h1 id="nombre">Santiago Perez Lanzillotta</h1>
+                </div>
+                <div class="edicion" id="contenedor_editar_nombre">
+                    <button type="button" id="boton_editar_nombre" class="btn btn-light" onclick="cambiar_nombre()"></button>
+                </div>
+
+
+                <div class="input_editar" id="input_editar_nombre" style="display: none">
+                    <div class="cancelar_y_opcion" style="display: block">
+
+                        <div class="contenedor_opcion">
+                            <input id="input_nombre" type="text" oninput="reemplazar_nombre(this.value)" placeholder="Nombre y Apellido..." />
+                        </div>
+                        <div class="contenedor_opcion">
+                            <input id="input_profesion" type="text" oninput="reemplazar_profesion(this.value)" placeholder="Profesión..." />
+                        </div>
+                        <div class="contenedor_opcion">
+                            <input id="input_ciudad" type="text" oninput="reemplazar_ciudad(this.value)" placeholder="Ciudad/País..." />
+                        </div>
+                        <div class="contenedor_cancelar">
+                            <button type="button" class="btn btn-danger" onclick="cerrar_ventana()">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="contenedorNombreYFoto" id="contenedorMermozPosicion">
+                    <div id="contenedornombreMermoz">
+                        <span id="textoNombreMermoz">Liceo Franco Argentino Jean Mermoz</span>
+                    </div>
+
+                    <div id="contenedorfotoMermoz">
+
+                        <img id="fotoMermoz" src="DataBase/Linkedin.png" alt="Foto Mermoz" />
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div id="ContenedorInfo_profesion">
+                <p id="texto_profesion">Estudiante</p>
+            </div>
+
+            <div id="contenedor_caracteristicas">
+                <div id="contenedor_pais">
+                    <span id="texto_pais">Buenos Aires(Argentina)</span>
+                </div>
+
+                <div id="contenedor_informacion_contacto">
+                    <a href="#">Información de contacto</a>
+
+                </div>
+            </div>
+
+            <div id="botones_seccion">
+
+                <button type="button" class="btn btn-primary">Tengo interés en</button>
+
+                <button type="button" class="btn btn-light">Añadir Sección</button>
+
+                <button type="button" class="btn btn-light">Más</button>
+            </div>
+        </div>
+
+        <div class="contenedor_acerca_de">
+            <div class="contenedor_acerca_de_y_boton" style="display: flex">
+                <div class="titulo_acerca_de">
+                    <h2>Acerca de:</h2>
+                </div>
+
+
+                <div class="edicion" id="contenedor_editar_acerca_de">
+                    <button type="button" id="boton_editar_acerca_de" class="btn btn-light" onclick="cambiar_acerca_de()"></button>
+                </div>
+
+                <div class="input_editar" id="contendendor_editar_acerca_de" style="display: none">
+                    <div class="cancelar_y_opcion" style="display: block">
+
+                        <div class="contenedor_opcion">
+                            <input id="input_acerca_de" type="text" oninput="reemplazar_acerca_de(this.value)" placeholder="Acerca de...." />
+                        </div>
+                        <div class="contenedor_cancelar">
+                            <button type="button" class="btn btn-danger" onclick="cerrar_ventana()">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div id="acerca_descripcion">
+                <p id="texto_descripcion">
+                    Estudiante de computación, con vocación tecnológica
+                </p>
+            </div>
+        </div>
+
+        <div class="contenedor_experiencia">
+            <div class="titulo_experiencia">
+                <h2>Experiencia:
+                </h2>
+            </div>
+
+            <div class="contenedor_particular">
+                <div class="contenedor_logo_empresa">
+                    <img class="fotoExperiencia" id="logo_empresa_1" src="DataBase/Linkedin.png" alt="Logo Empresa" />
+                </div>
+
+                <div class="contenedor_descripcion">
+                    <p class="descripcion_titulo" id="empresa1_nombre">
+                        Empresa1
+                    </p>
+                    <p class="descripcion-texto" id="empresa1_desc">
+                        Descripción del puesto en la empresa
+                    </p>
+
+                </div>
+
+                <!--
+
+
+
+                    -->
+                <div class="edicion" id="contenedor_editar_experiencia">
+                    <button type="button" id="boton_editar_experiencia" class="btn btn-light" onclick="cambiar_experiencia_1()"></button>
+                </div>
+
+
+                <div class="input_editar" id="input_editar_experiencia" style="display: none">
+                    <div class="cancelar_y_opcion" style="display: block">
+                        <div class="contenedor_opcion">
+                            <input id="nueva_imagen_empresa1" type="file" onchange="reemplazar_imagen_empresa1(this.value)" />
+                        </div>
+
+                        <div class="contenedor_opcion">
+                            <input id="input_empresa_1" type="text" oninput="reemplazar_empresa1(this.value)" placeholder="Empresa..." />
+                        </div>
+                        <div class="contenedor_opcion">
+                            <input id="input_empresa_1_desc" type="text" oninput="reemplazar_experiencia1(this.value)" placeholder="Experiencia..." />
+                        </div>
+                        <div class="contenedor_cancelar">
+                            <button type="button" class="btn btn-danger" onclick="cerrar_ventana()">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="contenedor_particular">
+                <div class="contenedor_logo_empresa">
+                    <img class="fotoExperiencia" id="logo_empresa_2" src="DataBase/Linkedin.png" alt="Logo Empresa" />
+                </div>
+
+                <div class="contenedor_descripcion">
+                    <p class="descripcion_titulo" id="empresa2_nombre">
+                        Empresa2
+                    </p>
+                    <p class="descripcion-texto" id="empresa2_desc">
+                        Descripción del puesto en la otra empresa
+                    </p>
+
+                </div>
+
+
+
+                <div class="edicion" id="contenedor_editar_experiencia2">
+                    <button type="button" id="boton_editar_experiencia2" class="btn btn-light" onclick="cambiar_experiencia_2()"></button>
+                </div>
+
+
+                <div class="input_editar" id="input_editar_experiencia2" style="display: none">
+                    <div class="cancelar_y_opcion" style="display: block">
+                        <div class="contenedor_opcion">
+                            <input id="nueva_imagen_empresa2" type="file" onchange="reemplazar_imagen_empresa2(this.value)" />
+                        </div>
+
+                        <div class="contenedor_opcion">
+                            <input id="input_empresa_2" type="text" oninput="reemplazar_empresa2(this.value)" placeholder="Empresa..." />
+                        </div>
+                        <div class="contenedor_opcion">
+                            <input id="input_empresa_2_desc" type="text" oninput="reemplazar_experiencia2(this.value)" placeholder="Experiencia..." />
+                        </div>
+                        <div class="contenedor_cancelar">
+                            <button type="button" class="btn btn-danger" onclick="cerrar_ventana()">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="contenedor_educacion">
+
+            <div class="titulo_educacion">
+                <h2>Educación:
+                </h2>
+
+            </div>
+
+            <div class="contenedor_particular">
+
+
+
+
+                <div class="contenedor_logo_empresa">
+                    <img id="logo_educacion1" class="fotoExperiencia" src="DataBase/Linkedin.png" alt="Logo Empresa" />
+                </div>
+
+                <div class="contenedor_descripcion">
+                    <p class="descripcion_titulo" id="input_educacion_1">
+                        Colegio
+                    </p>
+                    <p class="descripcion-texto" id="educacion1_desc">
+                        Descripción del colegio
+                    </p>
+
+                </div>
+
+
+                <div class="edicion" id="contenedor_editar_educacion1">
+                    <button type="button" id="boton_editar_educacion1" class="btn btn-light" onclick="cambiar_educacion_1()"></button>
+                </div>
+
+
+                <div class="input_editar" id="input_editar_educacion1" style="display: none">
+                    <div class="cancelar_y_opcion" style="display: block">
+                        <div class="contenedor_opcion">
+                            <input id="nueva_imagen_educacion1" type="file" onchange="reemplazar_imagen_educacion1(this.value)" />
+                        </div>
+
+                        <div class="contenedor_opcion">
+                            <input id="input_educacion1" type="text" oninput="reemplazar_educacion_1(this.value)" placeholder="Educación..." />
+                        </div>
+                        <div class="contenedor_opcion">
+                            <input id="input_educacion_1_desc" type="text" oninput="reemplazar_educacion_1_desc(this.value)" placeholder="Detalles..." />
+                        </div>
+                        <div class="contenedor_cancelar">
+                            <button type="button" class="btn btn-danger" onclick="cerrar_ventana()">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div class="contenedor_particular">
+                <div class="contenedor_logo_empresa">
+                    <img id="logo_educacion2" class="fotoExperiencia" src="DataBase/Linkedin.png" alt="Logo Empresa" />
+                </div>
+
+                <div class="contenedor_descripcion">
+                    <p class="descripcion_titulo" id="input_educacion_2">
+                        Secundaria
+                    </p>
+                    <p class="descripcion-texto" id="educacion2_desc">
+                        Descripción de la secundaria
+                    </p>
+
+                </div>
+
+
+                <div class="edicion" id="contenedor_editar_educacion2">
+                    <button type="button" id="boton_editar_educacion2" class="btn btn-light" onclick="cambiar_educacion_2()"></button>
+                </div>
+
+
+                <div class="input_editar" id="input_editar_educacion2" style="display: none">
+                    <div class="cancelar_y_opcion" style="display: block">
+                        <div class="contenedor_opcion">
+                            <input id="nueva_imagen_educacion2" type="file" onchange="reemplazar_imagen_educacion2(this.value)" />
+                        </div>
+
+                        <div class="contenedor_opcion">
+                            <input id="input_educacion2" type="text" oninput="reemplazar_educacion_2(this.value)" placeholder="Educación..." />
+                        </div>
+                        <div class="contenedor_opcion">
+                            <input id="input_educacion_2_desc" type="text" oninput="reemplazar_educacion_2_desc(this.value)" placeholder="Detalles..." />
+                        </div>
+                        <div class="contenedor_cancelar">
+                            <button type="button" class="btn btn-danger" onclick="cerrar_ventana()">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="contenedor_particular">
+                <div class="contenedor_logo_empresa">
+                    <img id="logo_educacion3" class="fotoExperiencia" src="DataBase/Linkedin.png" alt="Logo Empresa" />
+                </div>
+
+                <div class="contenedor_descripcion">
+                    <p id="input_educacion_3" class="descripcion_titulo">
+                        Universidad
+                    </p>
+                    <p id="educacion3_desc" class="descripcion-texto">
+                        Descripción de la Universidad
+                    </p>
+
+                </div>
+
+
+                <div class="edicion" id="contenedor_editar_educacion3">
+                    <button type="button" id="boton_editar_educacion3" class="btn btn-light" onclick="cambiar_educacion_3()"></button>
+                </div>
+
+
+                <div class="input_editar" id="input_editar_educacion3" style="display: none">
+                    <div class="cancelar_y_opcion" style="display: block">
+                        <div class="contenedor_opcion">
+                            <input id="nueva_imagen_educacion3" type="file" onchange="reemplazar_imagen_educacion3(this.value)" />
+                        </div>
+
+                        <div class="contenedor_opcion">
+                            <input id="input_educacion3" type="text" oninput="reemplazar_educacion_3(this.value)" placeholder="Educación..." />
+                        </div>
+                        <div class="contenedor_opcion">
+                            <input id="input_educacion_3_desc" type="text" oninput="reemplazar_educacion_3_desc(this.value)" placeholder="Detalles..." />
+                        </div>
+                        <div class="contenedor_cancelar">
+                            <button type="button" class="btn btn-danger" onclick="cerrar_ventana()">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="segundo_bloque_imagen">
+
+        <div class="contenedor_soft_hard_skills">
+
+
+            <div class="titulo_skills">
+                <h2>Hard and Soft Skills:
+                </h2>
+
+            </div>
+
+
+            <div class="contenedor_soft_hard_particular">
+                <div class="contenedor_skill_titulo">
+                    <span id="skill1_titulo" class="texto_skill">LA HARD SKILL ES ESTA</span>
+                   
+                </div>
+                <div class="contenedor_barra_soft_hard">
+                    <div class="barra_soft_hard_total">
+                        <div class="barra_pintada" id="skill_1">
+                            <span class="porcentaje_soft_hard" id="primera_skill_porcentaje">50%
+                            </span>
+                        </div>
+
+                    </div>
+
+
+
+                     <div class="edicion" id="contenedor_editar_skill_1">
+                    <button type="button" id="boton_editar_skill_1" class="btn btn-light" onclick="cambiar_skill_1()"></button>
+                </div>
+
+                <div class="input_editar" id="input_editar_skill_1" style="display: none">
+                    <div class="cancelar_y_opcion" style="display: block">
+
+                        <div class="contenedor_opcion">
+                            <input id="input_skill_titulo_1" type="text" oninput="reemplazar_skill_titulo_1(this.value)" placeholder="Skill..." />
+
+
+                            <input id="input_skill_1" type="number" oninput="reemplazar_skill_1(this.value)" placeholder="Número 0 al 100" min="1" max="100" />
+                        </div>
+                        <div class="contenedor_cancelar">
+                            <button type="button" class="btn btn-danger" onclick="cerrar_ventana()">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                </div>
+                
+            </div>
+            <!--
+            <div class="contenedor_soft_hard_particular">
+
+
+                <span id="skill2_titulo" class="texto_skill">LA HARD SKILL ES ESTA</span>
+
+                <div class="contenedor_barra_soft_hard">
+                    <div class="barra_soft_hard_total">
+                        <div class="barra_pintada">
+                            <span class="porcentaje_soft_hard" id="segunda_skill_porcentaje">50%
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="edicion" id="contenedor_editar_skill_2">
+                    <button type="button" id="boton_editar_skill_2" class="btn btn-light" onclick="cambiar_skill_2()"></button>
+                </div>
+                <div class="input_editar" id="input_editar_skill_2" style="display: none">
+                    <div class="cancelar_y_opcion" style="display: block">
+
+                        <div class="contenedor_opcion">
+                            <input id="input_skill_titulo_2" type="text" oninput="reemplazar_skill_titulo_2(this.value)" placeholder="Skill..." />
+
+
+                            <input id="input_skill_2" type="number" oninput="reemplazar_skill_2(this.value)" placeholder="Número 0 al 100" min="1" max="100" />
+                        </div>
+                        <div class="contenedor_cancelar">
+                            <button type="button" class="btn btn-danger" onclick="cerrar_ventana()">Cancelar</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+    -->
+
+                 <div class="contenedor_soft_hard_particular">
+                <div class="contenedor_skill_titulo">
+                    <span id="skill2_titulo" class="texto_skill">LA HARD SKILL ES ESTA</span>
+                   
+                </div>
+                <div class="contenedor_barra_soft_hard">
+                    <div class="barra_soft_hard_total">
+                        <div class="barra_pintada" id="skill_2">
+                            <span class="porcentaje_soft_hard" id="segunda_skill_porcentaje">50%
+                            </span>
+                        </div>
+
+                    </div>
+
+
+
+                     <div class="edicion" id="contenedor_editar_skill_2">
+                    <button type="button" id="boton_editar_skill_2" class="btn btn-light" onclick="cambiar_skill_2()"></button>
+                </div>
+
+                <div class="input_editar" id="input_editar_skill_2" style="display: none">
+                    <div class="cancelar_y_opcion" style="display: block">
+
+                        <div class="contenedor_opcion">
+                            <input id="input_skill_titulo_2" type="text" oninput="reemplazar_skill_titulo_2(this.value)" placeholder="Skill..." />
+
+
+                            <input id="input_skill_2" type="number" oninput="reemplazar_skill_2(this.value)" placeholder="Número 0 al 100" min="1" max="100" />
+                        </div>
+                        <div class="contenedor_cancelar">
+                            <button type="button" class="btn btn-danger" onclick="cerrar_ventana()">Cancelar</button>
+                        </div>
+                    
+
+                </div>
+
+                </div>
+                
+            </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contenedor_educacion">
+
+            <div class="titulo_proyecto">
+                <h2>Proyectos:
+                </h2>
+
+            </div>
+
+            <div class="contenedor_particular">
+
+                <div class="contenedor_descripcion_proyecto">
+                    <p id="proyecto1_titulo" class="descripcion_titulo_proyecto">
+                        Colegio
+                    </p>
+                    <p id="proyecto1_desc" class="descripcion-texto">
+                        Descripción del colegio
+                    </p>
+                </div>
+
+
+
+                <div class="edicion" id="contenedor_editar_proyecto1">
+                    <button type="button" id="boton_editar_proyecto1" class="btn btn-light" onclick="cambiar_proyecto_1()"></button>
+                </div>
+
+
+                <div class="input_editar" id="input_editar_proyecto1" style="display: none; margin-left: 0px;">
+                    <div class="cancelar_y_opcion" style="display: block">
+
+                        <div class="contenedor_opcion">
+                            <input id="input_proyecto1" type="text" oninput="reemplazar_proyecto_1(this.value)" placeholder="Proyecto..." />
+                        </div>
+                        <div class="contenedor_opcion">
+                            <input id="input_proyecto_1_desc" type="text" oninput="reemplazar_proyecto_1_desc(this.value)" placeholder="Detalles..." />
+                        </div>
+                        <div class="contenedor_cancelar">
+                            <button type="button" class="btn btn-danger" onclick="cerrar_ventana()">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="contenedor_particular">
+
+                <div class="contenedor_descripcion_proyecto">
+                    <p id="proyecto2_titulo" class="descripcion_titulo_proyecto">
+                        Secundaria
+                    </p>
+                    <p id="proyecto2_desc" class="descripcion-texto">
+                        Descripción de la secundaria
+                    </p>
+                </div>
+
+
+                <div class="edicion" id="contenedor_editar_proyecto2">
+                    <button type="button" id="boton_editar_proyecto2" class="btn btn-light" onclick="cambiar_proyecto_2()"></button>
+                </div>
+
+
+                <div class="input_editar" id="input_editar_proyecto2" style="display: none; margin-left: 0px;">
+                    <div class="cancelar_y_opcion" style="display: block">
+
+                        <div class="contenedor_opcion">
+                            <input id="input_proyecto2" type="text" oninput="reemplazar_proyecto_2(this.value)" placeholder="Proyecto..." />
+                        </div>
+                        <div class="contenedor_opcion">
+                            <input id="input_proyecto_2_desc" type="text" oninput="reemplazar_proyecto_2_desc(this.value)" placeholder="Detalles..." />
+                        </div>
+                        <div class="contenedor_cancelar">
+                            <button type="button" class="btn btn-danger" onclick="cerrar_ventana()">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
