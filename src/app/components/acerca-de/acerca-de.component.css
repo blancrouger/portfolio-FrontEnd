@@ -1,0 +1,34 @@
+.master_acerca_de {
+  padding-top: 30px;
+}
+
+.contenedor_acerca_de_y_boton {
+  align-items: center;
+}
+
+.contenedor_acerca_de {
+  width: 100%;
+  border-color: darkmagenta;
+  border-radius: 15px 15px 15px 15px;
+  border-style: dotted;
+  border-style: dashed;
+  margin-bottom: 50px;
+}
+
+
+.titulo_acerca_de {
+  margin-left: 10px;
+  text-decoration: underline;
+  color: cyan;
+  text-decoration-color: cyan;
+}
+
+#acerca_descripcion {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: aqua;
+  overflow-wrap: anywhere;
+  margin-bottom: 15px;
+}
+
+

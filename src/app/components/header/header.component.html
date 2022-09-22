@@ -1,0 +1,24 @@
+<div class="header">
+  <div class='cabeza'>
+
+    <div class="logo_programo">
+    <app-logo-program></app-logo-program>
+      
+      </div>
+
+    <div class="redes">
+      <app-red-social></app-red-social>
+    </div>
+
+      
+    <div class="boton_logging">
+        <app-btn-logging
+      text="{{showLogState ? 'Logout' : 'Login'}}"
+      clase="{{showLogState ? 'btn btn-danger' : 'btn btn-success'}}"
+       (btnClick)="toggleLogging()"
+
+      ></app-btn-logging>
+      </div>
+    
+  </div>
+</div>

@@ -1,0 +1,13 @@
+ div{
+  display: flex;
+}
+
+#logo1 {
+  width: 25px;
+  height: 25px;
+}
+
+#logo2 {
+  width: 78px;
+  height: 23px;
+}

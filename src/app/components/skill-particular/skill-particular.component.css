@@ -1,0 +1,66 @@
+.contenedor_soft_hard_particular {
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contenedor_soft_hard_particular {
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.contenedor_barra_soft_hard {
+  display: inline-flex;
+}
+
+.barra_soft_hard_total {
+  display: inline-flex;
+  width: 300px;
+  height: 25px;
+  background-color: mintcream;
+  position: relative;
+  border-radius: 0px 25px 25px 0px;
+}
+
+.barra_pintada {
+  position: absolute;
+  display: inline;
+  width: 50%;
+  left: 0px;
+  height: 25px;
+  border-radius: 0px 25px 25px 0px;
+  background-color: green;
+}
+
+.porcentaje_soft_hard { /*fijarse si puedo sacar estas dos ultimas ids cuando busco por id*/
+  display: inline;
+  font-family: 'Gill Sans MT';
+  color: silver;
+}
+.texto_skill {
+  text-decoration: underline;
+  color: cyan;
+  text-decoration-color: cyan;
+  overflow-wrap: anywhere;
+}
+
+
+.edicion {
+  position: absolute;
+  right: 30px;
+}
+
+#boton_borrar_skill {
+  margin-left: 10px;
+}
+
+.btn-light {
+  background: gray;
+  border: none;
+}
+
+.fa-trash {
+  color: darkred;
+}

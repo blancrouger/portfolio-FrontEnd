@@ -1,0 +1,61 @@
+.contenedor_particular {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.contenedor_logo_empresa {
+  margin-left: 20px;
+}
+
+.fotoExperiencia {
+  align-self: center;
+  width: 60px;
+  height: 60px;
+}
+
+.contenedor_descripcion {
+  margin-right: 5px;
+  margin-left: 5px;
+  color: aqua;
+}
+
+.descripcion_titulo {
+  margin-left: 40px;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  margin-right: 5px;
+}
+
+.descripcion-texto {
+  margin-left: 40px;
+  margin-bottom: 0px;
+  margin-right: 5.7px;
+}
+
+.fotoExperiencia {
+  align-self: center;
+  width: 60px;
+  height: 60px;
+}
+
+.edicion {
+  position: absolute;
+  right: 30px;
+}
+
+#boton_borrar_experiencia{
+    margin-left:10px;
+}
+
+.btn-light {
+  background: gray;
+  border: none;
+}
+
+.fa-trash{
+    color:darkred;
+}
